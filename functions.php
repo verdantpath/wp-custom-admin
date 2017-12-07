@@ -4,3 +4,15 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 
 }
+
+function wpt_admin_color_schemes() {
+
+  $theme_dir = get_stylesheet_directory_uri();
+
+  wp_admin_css_color(
+    'treehouse', __( 'Treehouse' ),
+    $theme_dir . '/admin-colors/treehouse/colors.css',
+    array( '#384047', '#5BC67B', '#838cc7', '#ffffff' )
+  );
+}
+add_action('admin_init', 'wpt_admin_color_schemes');
