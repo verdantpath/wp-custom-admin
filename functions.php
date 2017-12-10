@@ -10,7 +10,8 @@ function wpt_admin_color_schemes() {
   $theme_dir = get_stylesheet_directory_uri();
 
   wp_admin_css_color(
-    'treehouse', __( 'Treehouse' ),
+    'treehouse',
+    __( 'Treehouse' ),
     $theme_dir . '/admin-colors/treehouse/colors.css',
     array( '#384047', '#5BC67B', '#838cc7', '#ffffff' )
   );
