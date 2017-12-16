@@ -18,6 +18,22 @@ function wpt_admin_color_schemes() {
 }
 add_action('admin_init', 'wpt_admin_color_schemes');
 
+function wpt_add_dashboard_widgets() {
+
+	wp_add_dashboard_widget(
+                 'wpt_welcome_dashboard_widget',         // Widget slug.
+                 'Welcome to Your Site!',         // Title.
+                 'wpt_dashboard_widget_function' // Display function.
+        );
+}
+add_action( 'wp_dashboard_setup', 'wpt_add_dashboard_widgets' );
+
+function wpt_dashboard_widget_function() {
+
+	// Display whatever it is you want to show.
+	echo "Hello World, I'm a great Dashboard Widget";
+}
+
 function wpt_remove_menus() {
   // remove_menu_page( 'edit.php' ); //posts
   // remove_menu_page( 'upload.php' ); //media
