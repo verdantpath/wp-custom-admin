@@ -19,8 +19,8 @@ function wpt_admin_color_schemes() {
 add_action('admin_init', 'wpt_admin_color_schemes');
 
 function wpt_remove_menus() {
-  remove_menu_page( 'edit.php' ); //posts
-  remove_menu_page( 'upload.php' ); //media
-  remove_menu_page( 'edit-comments.php' ); //comments
+  // remove_menu_page( 'edit.php' ); //posts
+  // remove_menu_page( 'upload.php' ); //media
+  // remove_menu_page( 'edit-comments.php' ); //comments
 }
 add_action( 'admin_menu', 'wpt_remove_menus' );
